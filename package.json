@@ -4,13 +4,26 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "debug": "NODE_OPTIONS='--inspect' next-dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
+    "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.4"
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.67",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.57.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-order-config-standard": "^0.1.3",
+    "typescript": "^5.4.3"
   }
 }
