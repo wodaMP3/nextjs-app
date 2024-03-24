@@ -5,8 +5,8 @@ function Home(): JSX.Element {
   return (
         <>
           <Htag tag='h1'>Text</Htag>
-          <Button appearance='primary' className="asd">button primary</Button>
-          <Button appearance='ghost'>button ghost</Button>
+          <Button appearance='primary' arrow='right'>button primary</Button>
+          <Button appearance='ghost' arrow='down'>button ghost</Button>
         </>
   );
 }
