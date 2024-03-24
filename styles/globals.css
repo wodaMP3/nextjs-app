@@ -1,7 +1,9 @@
 :root {
   --black: #3B434E;
+  --gray-light: #ebebeb;
   --white: white;
   --primary: #7653FC;
+  --primary-hover: #6344df;
   --red: #FC836D;
   --green: #1DC37E;
   --light-green: #C8F8E4;
@@ -35,4 +37,8 @@ a {
   text-decoration: none;
 
   color: inherit;
+}
+
+* {
+  box-sizing: border-box;
 }

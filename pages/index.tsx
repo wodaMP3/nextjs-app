@@ -1,9 +1,14 @@
-import { Htag } from "../components/Htag/Htag";
+import React from "react";
+import { Htag, Button} from "../components";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
-        <div>
+        <>
           <Htag tag='h1'>Text</Htag>
-        </div>
+          <Button appearance='primary'>button primary</Button>
+          <Button appearance='ghost'>button ghost</Button>
+        </>
   );
 }
+
+export default Home;
