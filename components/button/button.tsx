@@ -1,5 +1,5 @@
 import styles from './button.module.css';
-import { ButtonProps } from './button-props';
+import { ButtonProps } from './button.props';
 import ArrowIcon from './arrow.svg';
 import cn from 'classnames';
 
