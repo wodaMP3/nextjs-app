@@ -1,21 +1,22 @@
-import React from "react";
-import { Htag, Button, P, Tag } from "../components";
+import React from 'react';
+import { Button, Htag, P, Tag , Rating} from '../components';
 
 function Home(): JSX.Element {
-  return (
-        <>
-          <Htag tag='h1'>Text</Htag>
-          <Button appearance='primary' arrow='right'>button primary</Button>
-          <Button appearance='ghost' arrow='down'>button ghost</Button>
-          <P size='l' >big</P>
-          <P size='m' >medium</P>
-          <P size='s' >small</P>
-          <Tag size='s'>Ghost</Tag>
-          <Tag size='m' color='red'>Red</Tag>
-          <Tag size='s' color='green'>Green</Tag>
-          <Tag color='primary'>primary</Tag>     
-        </>
-  );
+	return (
+		<>
+			<Htag tag='h1'>Заголовок</Htag>
+			<Button appearance='primary' arrow='right'>Кнопка</Button>
+			<Button appearance='ghost' arrow='down'>Кнопка</Button>
+			<P size='l'>Большой</P>
+			<P>Средний</P>
+			<P size='s'>Маленький</P>
+			<Tag size='s'>Ghost</Tag>
+			<Tag size='m' color='red'>Red</Tag>
+			<Tag size='s' color='green'>Green</Tag>
+			<Tag color='primary'>Green</Tag>
+			<Rating rating={4}/>
+		</>
+	);
 }
 
 export default Home;
