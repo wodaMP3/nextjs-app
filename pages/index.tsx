@@ -14,7 +14,7 @@ function Home(): JSX.Element {
 			<Tag size='m' color='red'>Red</Tag>
 			<Tag size='s' color='green'>Green</Tag>
 			<Tag color='primary'>Green</Tag>
-			<Rating rating={4}/>
+			<Rating rating={4} isEditable />
 		</>
 	);
 }
