@@ -1,4 +1,4 @@
-import { TopLevelCategory } from "./page.interface";
+import { TopLevelCategory } from './page.interface';
 
 export interface PageItem {
 	alias: string;
@@ -14,7 +14,6 @@ export interface MenuItem {
 	isOpened?: boolean;
 	pages: PageItem[];
 }
-
 
 export interface FirstLevelMenuItem {
 	route: string;
