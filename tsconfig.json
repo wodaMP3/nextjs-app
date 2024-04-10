@@ -23,7 +23,7 @@
     "images.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/Cards"  ],
   "exclude": [
     "node_modules"
   ]
