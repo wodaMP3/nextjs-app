@@ -1,4 +1,4 @@
-import { Htag, Tag } from '../../components';
+import { Htag, Tag, HhData } from '../../components';
 import { TopPageComponentProps } from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 
@@ -17,9 +17,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
 				<Htag tag='h2'>Offers {page.category}</Htag>
 				<Tag color='red' size='m'>Hh.ru</Tag>
 			</div>
-			<div className={styles.hh}>
-				
-			</div>
+			<HhData {...page.hh}/>
 		</div>
 	);
 };
