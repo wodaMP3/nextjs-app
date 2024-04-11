@@ -18,7 +18,11 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
 				<Htag tag='h2'>Offers {page.category}</Htag>
 				<Tag color='red' size='m'>Hh.ru</Tag>
 			</div>
-			{firstCategory == TopLevelCategory.Courses && <HhData {...page.hh}/>}
+			{firstCategory == TopLevelCategory.Courses && page.hh && <HhData {...page.hh}/>}
+			{page.advantages && page.advantages.length > 0 && <>
+				<Htag tag='h2'>Advantages</Htag>
+			</>
+			}
 		</div>
 	);
 };
