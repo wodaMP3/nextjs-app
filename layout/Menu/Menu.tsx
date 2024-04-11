@@ -18,7 +18,7 @@ export const Menu = (): JSX.Element => {
             }
             return m;
         }));
-    }
+    };
  
 	const buildFirstLevel = () => {
 		return <>
@@ -55,7 +55,7 @@ export const Menu = (): JSX.Element => {
 							{buildThirdLevel(m.pages, menuItem.route)}
 						</div>
 					</div>
-                    )
+                    );
                 })}
 			</div>
 		);

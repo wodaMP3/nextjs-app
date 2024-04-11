@@ -10,7 +10,8 @@ export interface IAppContext {
 
 export const AppContext = createContext<IAppContext>({ menu: [], firstCategory: TopLevelCategory.Courses });
 
-export const AppContextProvider = ({ menu, firstCategory, children }: IAppContext & { children: ReactNode }): JSX.Element => {
+export const AppContextProvider = ({ menu, firstCategory, children }: 
+		IAppContext & { children: ReactNode }): JSX.Element => {
 	const [menuState, setMenuState] = useState<MenuItem[]>(menu);
 	const setMenu = (newMenu: MenuItem[]) => {
 		setMenuState(newMenu);

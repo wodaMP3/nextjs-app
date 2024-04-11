@@ -7,7 +7,8 @@
     "debug": "NODE_OPTIONS='--inspect' next-dev",
     "build": "next build",
     "start": "next start",
-    "stylelint": "stylelint \"**/*.css\" --fix"
+    "stylelint": "stylelint \"**/*.css\" --fix",
+    "lint": "next lint"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -22,8 +23,8 @@
     "@types/classnames": "^2.3.1",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.67",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "stylelint": "^16.2.1",

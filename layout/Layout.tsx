@@ -1,6 +1,5 @@
 import { LayoutProps } from './Layout.props';
 import styles from './Layout.module.css';
-import cn from 'classnames';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { Sidebar } from './Sidebar/Sidebar';
@@ -31,6 +30,6 @@ export const withLayout = <T extends Record<string, unknown> & IAppContext>
 				<Component {...props}/>
 			</Layout>
 			</AppContextProvider>
-		)
-	}
-}
+		);
+	};
+};
