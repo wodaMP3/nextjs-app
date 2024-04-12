@@ -1,4 +1,4 @@
-import { Htag, Tag, HhData, Advantages, Sort, Rating } from '../../components';
+import { Htag, Tag, HhData, Advantages, Sort } from '../../components';
 import { TopPageComponentProps } from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
