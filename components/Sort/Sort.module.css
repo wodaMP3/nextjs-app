@@ -1,0 +1,8 @@
+.sortIcon {
+    display: none;
+}
+
+.active .sortIcon {
+    display: block;
+    margin-right: 8px;
+}
