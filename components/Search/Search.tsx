@@ -11,6 +11,12 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
 	const [search, setSearch] = useState<string>('');
 	const router = useRouter();
 
+	const handleKeyDown = (e: KeyboardEvent) => {
+		if (e.key == 'Enter') {
+			goToSearch;
+		}
+	};
+
 	const goToSearch = () => {
 		router.push({
 			pathname: '/search',
@@ -21,17 +27,18 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
 	};
 
 	return (
-		<div className={cn(className, styles.search)}>
+		<div className={cn(className, styles.search)} {...props}>
 			<Input 
 				className={styles.input}
 				placeholder='search...'
 				value={search}
 				onChange={(e) => setSearch(e.target.value)}
+				onKeyDown={handleKeyDown}
 			/>
 			<Button
 				appearance="primary"
 				className={styles.button}
-				onClick={() => { }}
+				onClick={goToSearch}
 			>
 				<GlassIcon />
 			</Button>
