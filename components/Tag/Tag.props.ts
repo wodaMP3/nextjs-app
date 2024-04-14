@@ -5,7 +5,7 @@ export interface PProps extends DetailedHTMLProps
 HTMLDivElement >
 {
     size?: 's' | 'm';
-    children: ReactNode;
+    children?: ReactNode;
     color?: 'ghost' | 'red' | 'grey'| 'green' | 'primary';
     href?: string;
 }

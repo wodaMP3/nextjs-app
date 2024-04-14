@@ -1,9 +1,8 @@
 import { ProductProps } from './Product.props';
 import styles from './Product.module.css';
-import cn from 'classnames';
 import { Card } from '../Card/Card';
-import { Rating } from '../Rating/Rating';
 import { Tag } from '../Tag/Tag';
+import { Rating } from '../Rating/Rating';
 import { Button } from '../button/button';
 import { priceRu } from '../../helpers/helpers';
 
@@ -12,8 +11,15 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
 		<Card className={styles.product}>
 			<div className={styles.logo}><img src={product.image} alt={product.title} /></div>
 			<div className={styles.title}>{product.title}</div>
-			<div className={styles.price}>{priceRu(product.price)}</div>
-			<div className={styles.credit}>{priceRu(product.credit)}/<span className={styles.month}>month</span></div>
+			<div className={styles.price}>
+				{priceRu(product.price)}
+				{product.oldPrice && <Tag className={styles.oldPrice} color="green">{priceRu(product.price - product.oldPrice)}</Tag>}
+			</div>
+			<div className={styles.credit}>
+				{priceRu(product.credit)}
+				/
+				<span className={styles.month}>month</span>
+			</div>
 			<div className={styles.rating}><Rating rating={product.reviewAvg ?? product.initialRating}/></div>
 			<div className={styles.tags}>{product.categories.map(c => 
 					<Tag key={c} color='ghost'>{c}</Tag>)} </div>
