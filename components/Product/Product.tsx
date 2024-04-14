@@ -4,6 +4,7 @@ import cn from 'classnames';
 import { Card } from '../Card/Card';
 import { Rating } from '../Rating/Rating';
 import { Tag } from '../Tag/Tag';
+import { Button } from '../button/button';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
 	return (
@@ -18,6 +19,24 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
 			<div className={styles.priceTitle}>Price</div>
 			<div className={styles.creditTitle}>credit</div>
 			<div className={styles.rateTitle}>{product.reviewCount} reviews</div>
+			<hr />
+			<div className={styles.description}>{product.description}</div>
+			<div className={styles.feature}>features</div>
+			<div className={styles.advBlock}>
+				<div className={styles.advantages}>
+					<div>Advantages</div>
+					<div>{product.advantages}</div>	
+				</div>
+				<div className={styles.disadvantages}>
+					<div>Disadvantages</div>
+					<div>{product.disadvantages}</div>	
+				</div>
+			</div>
+			<hr />
+			<div className={styles.actions}>
+				<Button appearance='primary'>Get more</Button>
+				<Button appearance='ghost' arrow={'right'}>Read reviews</Button>
+			</div>
 		</Card>
 	);	
 };
