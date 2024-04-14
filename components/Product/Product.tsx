@@ -7,7 +7,7 @@ import { Button } from '../button/button';
 import { priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 
-export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
+export const Product = ({ product }: ProductProps): JSX.Element => {
 	return (
 		<Card className={styles.product}>
 			<div className={styles.logo}><img src={product.image} alt={product.title} /></div>
