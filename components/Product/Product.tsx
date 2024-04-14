@@ -5,6 +5,7 @@ import { Tag } from '../Tag/Tag';
 import { Rating } from '../Rating/Rating';
 import { Button } from '../button/button';
 import { priceRu } from '../../helpers/helpers';
+import { Divider } from '../Divider/Divider';
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
 	return (
@@ -22,27 +23,27 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
 			</div>
 			<div className={styles.rating}><Rating rating={product.reviewAvg ?? product.initialRating}/></div>
 			<div className={styles.tags}>{product.categories.map(c => 
-					<Tag key={c} color='ghost'>{c}</Tag>)} </div>
+					<Tag key={c} className={styles.caterogy} color='ghost'>{c}</Tag>)} </div>
 			<div className={styles.priceTitle}>Price</div>
 			<div className={styles.creditTitle}>credit</div>
 			<div className={styles.rateTitle}>{product.reviewCount} reviews</div>
-			<div className={styles.hr}><hr className={styles.hr}/></div>
+			<Divider className={styles.hr}/>
 			<div className={styles.description}>{product.description}</div>
 			<div className={styles.feature}>features</div>
 			<div className={styles.advBlock}>
-				<div className={styles.advantages}>
-					<div>Advantages</div>
+			{product.advantages && <div className={styles.advantages}>
+					<div className={styles.advTitle}>Advantages</div>
 					<div>{product.advantages}</div>	
-				</div>
-				<div className={styles.disadvantages}>
-					<div>Disadvantages</div>
-					<div>{product.disadvantages}</div>	
-				</div>
+				</div>}
+				{product.disadvantages && <div className={styles.disadvantages}>
+					<div className={styles.advTitle}>Disadvantages</div>
+					<div>{product.disadvantages}</div> 	
+				</div>}
 			</div>
-			<div className={styles.hr}><hr className={styles.hr}/></div>
+			<Divider className={styles.hr}/>
 			<div className={styles.actions}>
 				<Button appearance='primary'>Get more</Button>
-				<Button appearance='ghost' arrow={'right'}>Read reviews</Button>
+				<Button appearance='ghost' arrow={'right'} className={styles.reviewButton}>Read reviews</Button>
 			</div>
 		</Card>
 	);	
