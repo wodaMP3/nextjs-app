@@ -1,0 +1,6 @@
+.product {
+    display: grid;
+    grid-template-columns: [start] 70px [logoend] 1fr [middle] auto 
+        [pricestart] auto [priceend] 40px 
+            [creditstart] auto [creditend] 40px [ratestart] auto [end] ;
+}
