@@ -1,5 +1,6 @@
 import { ProductProps } from './Product.props';
 import styles from './Product.module.css';
+import cn from 'classnames';
 import { Card } from '../Card/Card';
 import { Tag } from '../Tag/Tag';
 import { Rating } from '../Rating/Rating';
@@ -8,9 +9,11 @@ import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 
 export const Product = ({ product }: ProductProps): JSX.Element => {
+
 	return (
 		<Card className={styles.product}>
-			<div className={styles.logo}><img src={product.image} alt={product.title} /></div>
+			<div className={styles.logo}>
+				<img src={product.image} alt={product.title} /></div>
 			<div className={styles.title}>{product.title}</div>
 			<div className={styles.price}>
 				{priceRu(product.price)}
@@ -49,7 +52,7 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 					<div>{product.disadvantages}</div> 	
 				</div>}
 			</div>
-			<Divider className={styles.hr}/>
+			<Divider className={cn(styles.hr, styles.hr2)}/>
 			<div className={styles.actions}>
 				<Button appearance='primary'>Get more</Button>
 				<Button appearance='ghost' arrow={'right'} className={styles.reviewButton}>Read reviews</Button>
