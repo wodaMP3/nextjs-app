@@ -72,7 +72,6 @@
 
 .rating {
     align-self: flex-end;
-
 }
 
 .description {
@@ -80,6 +79,7 @@
    line-height: 24px;
    margin-bottom: 15px;
 }
+
 .priceTitle, 
 .creditTitle,
 .rateTitle {
