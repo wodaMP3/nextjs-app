@@ -144,6 +144,10 @@
 	padding: 30px;
 }
 
+.reviews {
+    margin-top: -30px;
+}
+
 @media screen and (max-width: 1320px) {
 	.product {
 		grid-template-columns: 

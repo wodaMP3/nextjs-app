@@ -4,13 +4,17 @@ import cn from 'classnames';
 import { Card } from '../Card/Card';
 import { Tag } from '../Tag/Tag';
 import { Rating } from '../Rating/Rating';
-import { Button } from '../button/button';
+import { Button } from '../Button/Button';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
+import { useState } from 'react';
 
 export const Product = ({ product }: ProductProps): JSX.Element => {
 
+	const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+
 	return (
+		<>
 		<Card className={styles.product}>
 			<div className={styles.logo}>
 				<img src={product.image} alt={product.title} /></div>
@@ -55,8 +59,19 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 			<Divider className={cn(styles.hr, styles.hr2)}/>
 			<div className={styles.actions}>
 				<Button appearance='primary'>Get more</Button>
-				<Button appearance='ghost' arrow={'right'} className={styles.reviewButton}>Read reviews</Button>
+				<Button appearance='ghost' 
+				arrow={isReviewOpened ? 'down': 'right'} 
+				className={styles.reviewButton}
+				onClick={() => setIsReviewOpened(!isReviewOpened)}
+				>Read reviews</Button>
 			</div>
 		</Card>
+		<Card color='blue' className={cn(styles.reviews, {
+				[styles.opened]: isReviewOpened,
+				[styles.closed]: !isReviewOpened,
+			})}>
+				asd
+		</Card>
+		</>
 	);	
 };
