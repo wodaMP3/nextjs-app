@@ -8,6 +8,7 @@ import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import { useState } from 'react';
 import { Button } from '../button/Button';
+import { Review } from '../Review/Review';
 
 export const Product = ({ product }: ProductProps): JSX.Element => {
 
@@ -33,7 +34,7 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 					<Tag key={c} className={styles.caterogy} color='ghost'>{c}</Tag>)} </div>
 			<div className={styles.priceTitle}>Price</div>
 			<div className={styles.creditTitle}>credit</div>
-			<div className={styles.rateTitle}>{product.reviewCount} 
+			<div className={styles.rateTitle}>{product.reviewCount}&nbsp;
 				{declOfNum(	product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</div>
 			<Divider className={styles.hr}/>
 			<div className={styles.description}>{product.description}</div>
@@ -70,7 +71,9 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 				[styles.opened]: isReviewOpened,
 				[styles.closed]: !isReviewOpened,
 			})}>
-				asd
+				{product.reviews.map(r => (
+					<Review key={r._id} review={r}/>
+				))}
 		</Card>
 		</>
 	);	
