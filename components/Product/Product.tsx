@@ -4,10 +4,10 @@ import cn from 'classnames';
 import { Card } from '../Card/Card';
 import { Tag } from '../Tag/Tag';
 import { Rating } from '../Rating/Rating';
-import { Button } from '../Button/Button';
 import { declOfNum, priceRu } from '../../helpers/helpers';
 import { Divider } from '../Divider/Divider';
 import { useState } from 'react';
+import { Button } from '../button/Button';
 
 export const Product = ({ product }: ProductProps): JSX.Element => {
 
