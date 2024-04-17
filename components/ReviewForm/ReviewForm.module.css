@@ -27,7 +27,7 @@
 }
 
 .success {
-	background: var(--green-light);
+	background: var(--light-green);
 	padding: 20px;
 	position: relative;
 	margin-top: 20px;
@@ -49,7 +49,17 @@
 		grid-template-columns: [start] auto 1fr [end];
 	}
 
+	.title {
+		justify-self: normal;
+	}
+
 	.rating {
 		grid-column: start / end;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.reviewForm {
+		grid-template-columns: [start] 1fr [end];			
 	}
 }
