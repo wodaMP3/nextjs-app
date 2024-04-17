@@ -6,8 +6,13 @@ import { Input } from '../Input/Input';
 import { Rating } from '../Rating/Rating';
 import { Textarea } from '../Textarea/Textarea';
 import { Button } from '../button/Button';
+import { useForm } from 'react-hook-form';
+import { IReviewForm } from './ReviewForm.interface';
 
 export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+	const { register, control, handleSubmit } = useForm<IReviewForm>();
+
+
 	return (
 		<>
 			<div className={cn(styles.reviewForm, className)}
@@ -16,7 +21,7 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
 				<Input placeholder='Name'/>
 				<Input placeholder='Title of review' className={styles.title}/>
 				<div className={styles.rating}>
-					<span>Оценка:</span>
+					<span>Rating:</span>
 					<Rating rating={0} />
 				</div>
 				<Textarea placeholder='Text of review' className={styles.description}/>

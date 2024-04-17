@@ -73,10 +73,10 @@ export const Product = ({ product }: ProductProps): JSX.Element => {
 				[styles.closed]: !isReviewOpened,
 			})}>
 				{product.reviews.map(r => (
-					<>
-						<Review key={r._id} review={r}/>
+					<div key={r._id}>
+						<Review review={r}/>
 						<Divider /> 
-					</>
+					</div>
 				))}
 				<ReviewForm productId={product._id}/>
 		</Card>
